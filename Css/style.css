@@ -1,98 +1,116 @@
+/* Apply box-sizing to all elements, and their before and after pseudo-elements */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;  /* Use border-box model for box-sizing */
+    margin: 0;               /* Reset margin */
+    padding: 0;              /* Reset padding */
 }
 
+/* Styling for the body element */
 body{
-    margin-bottom: 0;
-    overflow-x: hidden;
-    letter-spacing: 0.06rem;
-    font-family:'Times New Roman', Times, serif;
-    padding-bottom: 0;
-    width: 100%;
-    height: 0;
-    border-bottom: 0;
+    margin-bottom: 0;                          /* Remove bottom margin */
+    overflow-x: hidden;                        /* Hide horizontal overflow */
+    letter-spacing: 0.06rem;                   /* Set letter spacing */
+    font-family: 'Times New Roman', Times, serif; /* Set font family */
+    padding-bottom: 0;                         /* Remove bottom padding */
+    width: 100%;                               /* Set width to 100% */
+    height: 0;                                 /* Set height to 0 */
+    border-bottom: 0;                          /* Remove bottom border */
 }
+
+/* Styling for elements with the class 'padding' */
 .padding {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 12px;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 0.06em;
-    font-weight: 400;
-    margin-top: 0px;
-    cursor: pointer;
+    justify-content: center;                   /* Center items horizontally */
+    display: flex;                             /* Use flexbox for layout */
+    align-items: center;                       /* Center items vertically */
+    box-sizing: border-box;                    /* Use border-box model for box-sizing */
+    padding: 12px;                             /* Set padding */
+    background-color: black;                   /* Set background color */
+    color: white;                              /* Set text color */
+    font-size: 14px;                           /* Set font size */
+    letter-spacing: 0.06em;                    /* Set letter spacing */
+    font-weight: 400;                          /* Set font weight */
+    margin-top: 0px;                           /* Set top margin */
+    cursor: pointer;                           /* Set cursor to pointer */
 }
 
+/* Add underline on hover for elements with the class 'padding' */
 .padding:hover {
-    text-decoration: underline;
+    text-decoration: underline;                /* Add underline on hover */
 }
 
-.logo{
-    line-height:70px;
-    position: relative; top: 3px; left: -140px;
+/* Styling for elements with the class 'logo' */
+.logo {
+    line-height: 70px;                         /* Set line height */
+    position: relative;                        /* Position relative */
+    top: 3px;                                  /* Adjust position from top */
+    left: -140px;                              /* Adjust position from left */
 }
 
+/* Styling for unordered lists inside nav elements */
 nav ul {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 140%;
-    margin-top: 18px;
-    list-style: none;
-    gap: 30px;
+    display: flex;                             /* Use flexbox for layout */
+    align-items: center;                       /* Center items vertically */
+    font-size: 14px;                           /* Set font size */
+    font-weight: 500;                          /* Set font weight */
+    line-height: 140%;                         /* Set line height */
+    margin-top: 18px;                          /* Set top margin */
+    list-style: none;                          /* Remove list bullets */
+    gap: 30px;                                 /* Set gap between items */
 }
 
+/* Styling for links inside unordered lists within nav elements */
 nav ul a {
-    text-decoration: none;
-    letter-spacing: 1.8px;
+    text-decoration: none;                     /* Remove underline from links */
+    letter-spacing: 1.8px;                     /* Set letter spacing */
 }
 
-.link{
-    position: relative; top: -5px; left: -50px;
-    font-stretch:ultra-expanded;
-    padding: 0.5rem 0.75rem;
-    color: black;
-    transition: color 0.25s;
+/* Styling for elements with the class 'link' */
+.link {
+    position: relative;                        /* Position relative */
+    top: -5px;                                 /* Adjust position from top */
+    left: -50px;                               /* Adjust position from left */
+    font-stretch: ultra-expanded;              /* Stretch font */
+    padding: 0.5rem 0.75rem;                   /* Set padding */
+    color: black;                              /* Set text color */
+    transition: color 0.25s;                   /* Set color transition */
 }
 
+/* Change text color on hover for elements with the class 'link' */
 .link:hover {
-    color: white;
+    color: white;                              /* Change text color on hover */
 }
 
+/* Styling for the ::after pseudo-element of elements with the class 'link' */
 .link::after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    background-color: black;
-    scale: 1 0;
-    z-index: -1;
-    transition: 0.45s;
+    position: absolute;                        /* Position absolute */
+    content: "";                               /* No content */
+    inset: 0;                                  /* Set all inset values to 0 */
+    background-color: black;                   /* Set background color */
+    scale: 1 0;                                /* Set scale */
+    z-index: -1;                               /* Set z-index */
+    transition: 0.45s;                         /* Set transition */
 }
 
+/* Scale up the ::after pseudo-element on hover for elements with the class 'link' */
 .link:hover::after {
-    scale: 1 1;
+    scale: 1 1;                                /* Scale up on hover */
 }
 
-.wrapper{
-    padding: 20px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-    height:auto;
-    display: flex;
+/* Styling for elements with the class 'wrapper' */
+.wrapper {
+    padding: 20px;                             /* Set padding */
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2); /* Set box shadow */
+    justify-content: center;                   /* Center items horizontally */
+    align-items: center;                       /* Center items vertically */
+    height: auto;                              /* Set height to auto */
+    display: flex;                             /* Use flexbox for layout */
 }
+
 
 .para {
-    background: grey url(../images/Image_-_Theme_-_Desktop_-_Sun_care_skincare_2400x_crop_center.webp);
+    background: grey url(/images/Image_-_Theme_-_Desktop_-_Sun_care_skincare_2400x_crop_center.webp);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,137 +170,162 @@ nav ul a {
     cursor: pointer;
 }
 
-
-.links{
-    color: black;
-    padding: 0.5rem 0.75rem;
-    font-stretch: ultra-expanded;
-    font-size: 29px;
-    letter-spacing: 0.06rem;
-    font-family:'Times New Roman', Times, serif;
-    position: relative; left: 160px; top: 25px;
+/* Styling for elements with the class 'links' */
+.links {
+    color: black;                              /* Set text color */
+    padding: 0.5rem 0.75rem;                   /* Set padding */
+    font-stretch: ultra-expanded;              /* Stretch font */
+    font-size: 29px;                           /* Set font size */
+    letter-spacing: 0.06rem;                   /* Set letter spacing */
+    font-family: 'Times New Roman', Times, serif; /* Set font family */
+    position: relative;                        /* Position relative */
+    left: 160px;                               /* Adjust position from left */
+    top: 25px;                                 /* Adjust position from top */
 }
 
+/* Change text color on hover for elements with the class 'links' */
 .links:hover {
-    color: white;
+    color: white;                              /* Change text color on hover */
 }
 
+/* Styling for the ::after pseudo-element of elements with the class 'links' */
 .links::after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    background-color: black;
-    scale: 10 0;
-    z-index: -1;
-    transition: 0.45s;
+    position: absolute;                        /* Position absolute */
+    content: "";                               /* No content */
+    inset: 0;                                  /* Set all inset values to 0 */
+    background-color: black;                   /* Set background color */
+    scale: 10 0;                               /* Set scale */
+    z-index: -1;                               /* Set z-index */
+    transition: 0.45s;                         /* Set transition */
 }
 
+/* Scale up the ::after pseudo-element on hover for elements with the class 'links' */
 .links:hover::after {
-    scale: 1 1;
+    scale: 1 1;                                /* Scale up on hover */
 }
 
+/* Styling for elements with the class 'line-1' */
 .line-1 {
-    height: 1px;
-    background: rgb(0, 0, 0);
-    position: relative; top: 20px;
-    margin: 0px 80px;
+    height: 1px;                               /* Set height */
+    background: rgb(0, 0, 0);                  /* Set background color */
+    position: relative;                        /* Position relative */
+    top: 20px;                                 /* Adjust position from top */
+    margin: 0px 80px;                          /* Set margin */
 }
 
-
+/* Styling for elements with the class 'intro' */
 .intro {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    position: relative; top: 30px;
+    height: 100vh;                             /* Set height to 100% of the viewport height */
+    display: flex;                             /* Use flexbox for layout */
+    justify-content: center;                   /* Center items horizontally */
+    align-items: center;                       /* Center items vertically */
+    background-color: #ffffff;                 /* Set background color */
+    position: relative;                        /* Position relative */
+    top: 30px;                                 /* Adjust position from top */
 }
 
+/* Styling for elements with the class 'grid' */
 .grid {
-    max-width: 1000px;
-    width: 100%;
-    height: 75%;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    transition: grid-template-columns 0.5s ease;
-    position: relative; top: -50px;
+    max-width: 1000px;                         /* Set maximum width */
+    width: 100%;                               /* Set width to 100% */
+    height: 75%;                               /* Set height to 75% */
+    display: grid;                             /* Use grid layout */
+    grid-template-columns: 1fr 1fr 1fr;        /* Define three equal columns */
+    gap: 8px;                                  /* Set gap between grid items */
+    transition: grid-template-columns 0.5s ease; /* Set transition for grid template columns */
+    position: relative;                        /* Position relative */
+    top: -50px;                                /* Adjust position from top */
 }
 
+/* Change grid template columns when hovering over elements with the class 'left' */
 .grid:has(.left:hover) {
-    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-columns: 3fr 2fr 2fr;        /* Adjust column sizes */
 }
 
+/* Change grid template columns when hovering over elements with the class 'center' */
 .grid:has(.center:hover) {
-    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;        /* Adjust column sizes */
 }
 
+/* Change grid template columns when hovering over elements with the class 'right' */
 .grid:has(.right:hover) {
-    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-columns: 2fr 2fr 3fr;        /* Adjust column sizes */
 }
 
+/* Styling for all img elements */
 img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+    width: 100%;                               /* Set width to 100% */
+    height: 100%;                              /* Set height to 100% */
+    display: block;                            /* Display as block */
+    object-fit: cover;                         /* Cover object fit */
 }
 
+/* Styling for direct children of the class 'grid' */
 .grid > div {
-    cursor: pointer;
+    cursor: pointer;                           /* Set cursor to pointer */
 }
 
+/* Styling for elements with the class 'content' */
 .content {
-    position: relative; top: -210px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 0;
+    position: relative;                        /* Position relative */
+    top: -210px;                               /* Adjust position from top */
+    margin-bottom: 0;                          /* Remove bottom margin */
+    padding-bottom: 0;                         /* Remove bottom padding */
+    border-bottom: 0;                          /* Remove bottom border */
 }
 
-
+/* Styling for elements with the class 'image-1' */
 .image-1 {
-    width: 620px;
-    height: 730px;
-    position: relative; 
-    margin-top: 180px;
+    width: 620px;                              /* Set width */
+    height: 730px;                             /* Set height */
+    position: relative;                        /* Position relative */
+    margin-top: 180px;                         /* Set top margin */
 }
 
+/* Styling for h1 elements within elements with the class 'right-text' */
 .right-text h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-    position: relative; left: 700px; 
-    margin-top: -620px;
-    font-style: italic;
-    font-weight:500;
-    letter-spacing: 0.03em;
-    line-height: 48px;
+    font-family: 'Times New Roman', Times, serif; /* Set font family */
+    font-size: 40px;                           /* Set font size */
+    position: relative;                        /* Position relative */
+    left: 700px;                               /* Adjust position from left */
+    margin-top: -620px;                        /* Adjust top margin */
+    font-style: italic;                        /* Set font style to italic */
+    font-weight: 500;                          /* Set font weight */
+    letter-spacing: 0.03em;                    /* Set letter spacing */
+    line-height: 48px;                         /* Set line height */
 }
 
+/* Styling for p elements within elements with the class 'right-text' */
 .right-text p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    position: relative; left: 300px; 
-    margin-top: 30px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #474747;
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif; /* Set font family */
+    font-size: 20px;                           /* Set font size */
+    position: relative;                        /* Position relative */
+    left: 300px;                               /* Adjust position from left */
+    margin-top: 30px;                          /* Set top margin */
+    font-weight: 300;                          /* Set font weight */
+    line-height: 24px;                         /* Set line height */
+    letter-spacing: 0.03em;                    /* Set letter spacing */
+    color: #474747;                            /* Set text color */
+    text-align: center;                        /* Center text */
 }
 
+/* Styling for img elements within elements with the class 'right-text' */
 .right-text img {
-    position: relative; left: 800px;
-    margin-top: 20px;
-    height: 100px;
-    width: 250px;
+    position: relative;                        /* Position relative */
+    left: 800px;                               /* Adjust position from left */
+    margin-top: 20px;                          /* Set top margin */
+    height: 100px;                             /* Set height */
+    width: 250px;                              /* Set width */
 }
 
+/* Styling for elements with the class 'one' */
 .one {
-    position: relative; left: 660px; 
-    margin-top: 40px;
-    height: 100px;
-    width: 550px;
-    align-items: center;
+    position: relative;                        /* Position relative */
+    left: 660px;                               /* Adjust position from left */
+    margin-top: 40px;                          /* Set top margin */
+    height: 100px;                             /* Set height */
+    width: 550px;                              /* Set width */
+    align-items: center;                       /* Center items vertically */
 }
 
 
@@ -336,95 +379,103 @@ img {
     transition: 0.55s;
     border-width: 1px;
 }
-
+/* Styling for paragraph elements within elements with class 'small-text' */
 .small-text p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    position: relative; left: -335px;
-    margin-top: 30px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #474747;
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif; /* Font family set to Times New Roman or similar serif fonts */
+    font-size: 18px; /* Font size set to 18px */
+    position: relative; left: -335px; /* Positioned relative to its normal position, shifted left by 335px */
+    margin-top: 30px; /* Top margin set to 30px */
+    font-weight: 300; /* Font weight set to 300 (light) */
+    line-height: 24px; /* Line height set to 24px */
+    letter-spacing: 0.03em; /* Letter spacing set to 0.03em */
+    color: #474747; /* Text color set to a specific shade of grey */
+    text-align: center; /* Text aligned to the center */
 }
 
+/* Styling for elements with class 'small-btn' */
 .small-btn {
-    padding: 11px 14px;
-    text-decoration: none;
-    letter-spacing: 0.10em;
-    justify-content: center;
-    position: relative; left: 215px;
-    margin-top: 13px;
-    font-size: 13px;
-    cursor: pointer;
+    padding: 11px 14px; /* Padding set to 11px top/bottom and 14px left/right */
+    text-decoration: none; /* No text decoration */
+    letter-spacing: 0.10em; /* Letter spacing set to 0.10em */
+    justify-content: center; /* Content centered */
+    position: relative; left: 215px; /* Positioned relative to its normal position, shifted left by 215px */
+    margin-top: 13px; /* Top margin set to 13px */
+    font-size: 13px; /* Font size set to 13px */
+    cursor: pointer; /* Cursor changes to pointer when hovered */
 }
 
+/* Styling for hover state of elements with class 'small-btn' */
 .small-btn:hover {
-    background-color: white;
-    transition: 0.35s;
+    background-color: white; /* Background color changes to white when hovered */
+    transition: 0.35s; /* Smooth transition over 0.35 seconds */
 }
 
-
+/* Styling for elements with class 'join' */
 .join {
-    width: 620px;
-    height: 365px;
-    background-color: #f1ece6;
-    position: relative; 
-    margin-top: 230px;
+    width: 620px; /* Width set to 620px */
+    height: 365px; /* Height set to 365px */
+    background-color: #f1ece6; /* Background color set to a light shade */
+    position: relative; /* Positioned relative */
+    margin-top: 230px; /* Top margin set to 230px */
 }
 
+/* Styling for h1 elements within elements with class 'join' */
 .join h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 38px;
-    font-weight:lighter;
-    line-height: 68px;
-    position: relative; top: 60px; left: 50px;
+    font-family: 'Times New Roman', Times, serif; /* Font family set to Times New Roman or similar serif fonts */
+    font-size: 38px; /* Font size set to 38px */
+    font-weight: lighter; /* Font weight set to lighter */
+    line-height: 68px; /* Line height set to 68px */
+    position: relative; top: 60px; left: 50px; /* Positioned relative to its normal position, shifted down by 60px and left by 50px */
 }
 
+/* Styling for paragraph elements within elements with class 'join' */
 .join p {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
-    position: relative; top: 65px; left: 50px;
-    font-weight: 100;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #474747;
-    text-align: center;
-    text-align: left;
+    font-family: 'Times New Roman', Times, serif; /* Font family set to Times New Roman or similar serif fonts */
+    font-size: 17px; /* Font size set to 17px */
+    position: relative; top: 65px; left: 50px; /* Positioned relative to its normal position, shifted down by 65px and left by 50px */
+    font-weight: 100; /* Font weight set to 100 (very light) */
+    line-height: 24px; /* Line height set to 24px */
+    letter-spacing: 0.03em; /* Letter spacing set to 0.03em */
+    color: #474747; /* Text color set to a specific shade of grey */
+    text-align: center; /* Text aligned to the center */
+    text-align: left; /* Text aligned to the left (overrides previous center alignment) */
 }
 
+/* Styling for elements with class 'join-now' */
 .join-now {
-    padding: 16px 45px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 0.10em;
-    justify-content: center;
-    position: relative; top: 77px; left: 50px;
-    font-size: 13px;
-    border-width: 1px;
-    cursor: pointer;
+    padding: 16px 45px; /* Padding set to 16px top/bottom and 45px left/right */
+    background-color: black; /* Background color set to black */
+    color: white; /* Text color set to white */
+    text-decoration: none; /* No text decoration */
+    letter-spacing: 0.10em; /* Letter spacing set to 0.10em */
+    justify-content: center; /* Content centered */
+    position: relative; top: 77px; left: 50px; /* Positioned relative to its normal position, shifted down by 77px and left by 50px */
+    font-size: 13px; /* Font size set to 13px */
+    border-width: 1px; /* Border width set to 1px */
+    cursor: pointer; /* Cursor changes to pointer when hovered */
 }
 
+/* Styling for hover state of elements with class 'join-now' */
 .join-now:hover {
-    background-color: white;
-    color: black;
-    transition: 0.35s;
-    border-width: 1px;
+    background-color: white; /* Background color changes to white when hovered */
+    color: black; /* Text color changes to black when hovered */
+    transition: 0.35s; /* Smooth transition over 0.35 seconds */
+    border-width: 1px; /* Border width remains 1px */
 }
 
+/* Styling for div elements within elements with class 'join' */
 .join div {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 13px;
-    position: relative; top: 30px;
-    font-weight: 100;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #474747;
-    text-align: center;
-    text-align: left;
+    font-family: 'Times New Roman', Times, serif; /* Font family set to Times New Roman or similar serif fonts */
+    font-size: 13px; /* Font size set to 13px */
+    position: relative; top: 30px; /* Positioned relative to its normal position, shifted down by 30px */
+    font-weight: 100; /* Font weight set to 100 (very light) */
+    line-height: 24px; /* Line height set to 24px */
+    letter-spacing: 0.03em; /* Letter spacing set to 0.03em */
+    color: #474747; /* Text color set to a specific shade of grey */
+    text-align: center; /* Text aligned to the center */
+    text-align: left; /* Text aligned to the left (overrides previous center alignment) */
 }
+
 
 .log{
     cursor: pointer;
@@ -492,124 +543,124 @@ img {
     height: 360px;
 }
 
-
-/*FOOTER SECTION */
+/* FOOTER SECTION */
 
 footer {
-    font-family:'Times New Roman', Times, serif;
-    background-color: hsl(262, 30%, 8%);
-    color: #fbfcfd;
+    font-family:'Times New Roman', Times, serif; /* Font family set to Times New Roman or similar serif fonts */
+    background-color: hsl(262, 30%, 8%); /* Background color set using HSL */
+    color: #fbfcfd; /* Text color set to a specific light shade */
 }
 
-/*EMail user input bar*/
+/* EMail user input bar */
 
 input {
-    all: unset;
+    all: unset; /* Resets all properties to their initial or inherited values */
 }
   
 .input-wrapper {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    background: hsl(231, 14%, 10%);
-    border: 2px solid #2b2c37;
-    border-radius: 10px;
-    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px,
-      #0000000a 0px 10px 10px -5px;
-    transition: all 0.35s ease-out;
-    position: relative; top: -25px; left: 68px;
-    cursor: text;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width of 400px */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Centered alignment of items */
+    background: hsl(231, 14%, 10%); /* Background color set using HSL */
+    border: 2px solid #2b2c37; /* Border color set to a specific dark shade */
+    border-radius: 10px; /* Rounded corners with a radius of 10px */
+    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px; /* Shadow effects */
+    transition: all 0.35s ease-out; /* Smooth transition for all properties */
+    position: relative; top: -25px; left: 68px; /* Positioned relative, shifted up by 25px and right by 68px */
+    cursor: text; /* Cursor changes to text when hovered */
 }
   
 .input {
-    width: calc(100% - 70px);
-    font: inherit;
-    font-size: 18px;
-    padding: 1rem;
+    width: calc(100% - 70px); /* Width calculated as full width minus 70px */
+    font: inherit; /* Inherits font properties */
+    font-size: 18px; /* Font size set to 18px */
+    padding: 1rem; /* Padding set to 1rem */
 }
 .input::placeholder {
-    color: #727884;
+    color: #727884; /* Placeholder text color set to a specific grey */
 }
   
 .input-wrapper:has(input:focus) {
-    border: 2px solid #de55de;
-    box-shadow: 0 0 120px hsl(300 67% 60% / 0.5);
+    border: 2px solid #de55de; /* Border color changes when input is focused */
+    box-shadow: 0 0 120px hsl(300 67% 60% / 0.5); /* Box shadow effect when input is focused */
 }
   
 .input-wrapper > svg {
-    position: absolute;
-    right: 1rem;
-    width: 28px;
-    flex-shrink: 0;
-    transition: 0.25s;
+    position: absolute; /* Positioned absolutely within the relative parent */
+    right: 1rem; /* Positioned 1rem from the right */
+    width: 28px; /* Width set to 28px */
+    flex-shrink: 0; /* Prevents shrinking */
+    transition: 0.25s; /* Smooth transition over 0.25 seconds */
 }
   
 svg > path {
-    fill: none;
-    stroke: #727884;
+    fill: none; /* No fill color */
+    stroke: #727884; /* Stroke color set to a specific grey */
 }
   
 .input:focus + svg > path {
-    stroke: none;
-    fill: hsl(328, 73%, 72%);
+    stroke: none; /* Stroke removed when input is focused */
+    fill: hsl(328, 73%, 72%); /* Fill color changes when input is focused */
 }
 
 .input:focus + svg {
-    scale: 1.2;
+    scale: 1.2; /* SVG scales up when input is focused */
 }
 
+/* Additional footer styling */
+
 footer {
-    width: 1260px;
-    height: 500px;
-    position: relative;
-    margin-top: -200px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    width: 1260px; /* Width set to 1260px */
+    height: 500px; /* Height set to 500px */
+    position: relative; /* Positioned relative */
+    margin-top: -200px; /* Margin top set to -200px */
+    overflow-x: hidden; /* Horizontal overflow hidden */
+    overflow-y: hidden; /* Vertical overflow hidden */
 }
 
 .clock {
-    position: relative; top: 188px; left: 70px;
+    position: relative; top: 188px; left: 70px; /* Positioned relative, shifted down by 188px and right by 70px */
 }
 
 .envelope {
-    position: relative; top: 195px; left: 70px;
+    position: relative; top: 195px; left: 70px; /* Positioned relative, shifted down by 195px and right by 70px */
 }
 
 .copyright {
-    background-color: white;
-    width: 150px;
-    height: 45px;
-    position: relative; top: 140px; left: 50px;
-
+    background-color: white; /* Background color set to white */
+    width: 150px; /* Width set to 150px */
+    height: 45px; /* Height set to 45px */
+    position: relative; top: 140px; left: 50px; /* Positioned relative, shifted down by 140px and right by 50px */
 }
 
 .shop {
-    max-width: fit-content;
-    height: 400px;
-    position: relative; top: -465px; left: 680px;
+    max-width: fit-content; /* Maximum width set to fit content */
+    height: 400px; /* Height set to 400px */
+    position: relative; top: -465px; left: 680px; /* Positioned relative, shifted up by 465px and right by 680px */
 }
 
 .Socials {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
+    display: flex; /* Flexbox layout */
+    list-style: none; /* No list style */
+    gap: 1rem; /* Gap between items set to 1rem */
 }
   
 .item a {
-    text-decoration: none;
-    width: 2rem;
-    height: 2rem;
-    background-color: #f0f9fe;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; left: 1000px; top: -410px;
-    z-index: 1;
-    border: 3px solid #f0f9fe;
-    overflow: hidden;
+    text-decoration: none; /* No text decoration */
+    width: 2rem; /* Width set to 2rem */
+    height: 2rem; /* Height set to 2rem */
+    background-color: #f0f9fe; /* Background color set to a specific light shade */
+    border-radius: 50%; /* Fully rounded corners */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centered alignment horizontally */
+    align-items: center; /* Centered alignment vertically */
+    position: relative; left: 1000px; top: -410px; /* Positioned relative, shifted right by 1000px and up by 410px */
+    z-index: 1; /* Z-index set to 1 */
+    border: 3px solid #f0f9fe; /* Border color set to a specific light shade */
+    overflow: hidden; /* Hidden overflow */
 }
+
   
 .item a::before {
     content: "";
@@ -654,19 +705,23 @@ footer {
 
 /* End of footer Section */
 
-.animation {
-	animation: transitionIn 0.75s;
+/* Animation class to apply the 'transitionIn' keyframes */
+
+.animation {    
+	animation: transitionIn 0.75s;       /* Applies the 'transitionIn' animation with a duration of 0.75 seconds */
 }
+
+/* Keyframes for the 'transitionIn' animation */
 
 @keyframes transitionIn {
 	from {
-		opacity: 0;
-		transform: translateX(-10px);
+		opacity: 0;     /* Starts with an opacity of 0 (fully transparent) */
+		transform: translateX(-10px);        /* Starts with a horizontal translation of -10px (shifted left) */
 	}
 
 	to {
-		opacity: 1;
-		transform: translateX(0);
+		opacity: 1;     /* Ends with an opacity of 1 (fully opaque) */
+		transform: translateX(0);       /* Ends with no horizontal translation (original position) */
 	}
 }
 

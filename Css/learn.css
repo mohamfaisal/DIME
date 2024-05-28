@@ -142,52 +142,58 @@ nav ul a {
     margin: 0px 60px;
     margin-top: 30px;
 }
-
+/* Styles for the learn button */
 .learn-btn {
-    margin-left: 820px;
-    margin-top: 40px;
-    padding: 16px 60px;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-    border-width: 0.1px;
-    width: 300px;
+    margin-left: 820px; /* Left margin of 820px */
+    margin-top: 40px; /* Top margin of 40px */
+    padding: 16px 60px; /* Padding: 16px top and bottom, 60px left and right */
+    font-size: 16px; /* Font size of the button text */
+    background-color: black; /* Background color of the button */
+    color: white; /* Text color of the button */
+    border-width: 0.1px; /* Border width */
+    width: 300px; /* Fixed width of 300px */
 }
 
+/* Styles for the learn button on hover */
 .learn-btn:hover {
-    box-shadow: inset -10.5em 0 0 0 white, inset 10.5em 0 0 0 white;
-    background-color: white;
-    color: black;
-    transition: 0.85s;
-    border-width: 1px;
+    box-shadow: inset -10.5em 0 0 0 white, inset 10.5em 0 0 0 white; /* Inset box shadows for hover effect */
+    background-color: white; /* Background color changes to white on hover */
+    color: black; /* Text color changes to black on hover */
+    transition: 0.85s; /* Transition duration for hover effect */
+    border-width: 1px; /* Border width changes to 1px on hover */
 }
 
+/* Styles for the black learn section */
 .black-learn {
-    background-color: #1e1e1e;
-    padding: 10px 10px 0px 10px;
-    margin-top: 70px;
+    background-color: #1e1e1e; /* Dark background color */
+    padding: 10px 10px 0px 10px; /* Padding: 10px top, left, and right, 0px bottom */
+    margin-top: 70px; /* Top margin of 70px */
 }
 
+/* Styles for the carousel container */
 .carousel {
-    overflow: hidden;
-    width: 1300px;
-    margin-top: 60px;
+    overflow: hidden; /* Hide overflow content */
+    width: 1300px; /* Fixed width of 1300px */
+    margin-top: 60px; /* Top margin of 60px */
 }
 
+/* Styles for the wrap container inside the carousel */
 .wrap {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 250px;
-    justify-content: stretch;
-    animation: slide 15s linear infinite;
+    display: grid; /* Grid display */
+    grid-auto-flow: column; /* Automatic flow in the column direction */
+    grid-auto-columns: 250px; /* Automatic column width of 250px */
+    justify-content: stretch; /* Stretch items to fill the container */
+    animation: slide 15s linear infinite; /* Slide animation for 15 seconds, linear and infinite */
 }
 
+/* Styles for images inside the wrap container */
 .wrap img {
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-    object-fit: cover;
+    width: 250px; /* Fixed width of 250px */
+    height: 250px; /* Fixed height of 250px */
+    border-radius: 15px; /* Rounded corners with radius 15px */
+    object-fit: cover; /* Cover the image within the given dimensions */
 }
+
 
 @keyframes slide {
     to {

@@ -133,17 +133,17 @@ nav ul a {
 }
 
 .plan-1 li {
-    list-style: none;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
-    position: relative; top: -10px;
+    list-style: none;       /*adding list style to none for cutting of every style from the list */
+    margin-top: 20px;           /*moving the element downwards by adding magrin 20px */
+    margin-left: 20px;          /* moving the elemet to the left wards by adding margin left 20px */
+    margin-right: 20px;     /* moving the element to the right wards by adding margin right 20px */
+    font-family: 'Times New Roman', Times, serif;       /* adding font family to the plan-1 */
+    font-size: 14px;        /* adjusting the font size to 14px */
+    position: relative; top: -10px;   
 }
 
 .plan-1 img {
-    position: relative; top: -100px; left: 85px;
+    position: relative; top: -100px; left: 85px;        /*adding the image and adjusting the position of the image in the page */
 }
 
 .plan-1-line {
@@ -155,35 +155,18 @@ nav ul a {
 }
 
 
-/* plan 2 */
-
-/*.plan-2 {
-    padding: 96px 10px;
-    border: 1px solid black;
-    margin-left: 150px;
-    margin-right: 870px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative; left: 234px; top: -488px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2); 
-    margin-bottom: 0;
-    cursor: pointer;
-    overflow: hidden;
-}*/
-
 .plan-2 {
-    padding: 96px 10px;
-    border: 1px solid black;
-    margin-left: 150px;
-    margin-right: 870px;
+    padding: 96px 10px;         /* padding : 96px top & bottom, 10px for right and left */
+    border: 1px solid black;        /*adding a border line to the box or padding */
+    margin-left: 150px;     
+    margin-right: 870px;            /* moving the element to the right wards by adding margin right: 870px */
     margin-top: -462px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;         /* defining the flex direction the coloumn wise */
     position: relative; left: 234px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);         /* adding a background shadow of the padding */
     margin-bottom: 0;
-    cursor: pointer;
+    cursor: pointer;        /* changing the cursor type to pointer when pointing the padding */
     overflow: hidden;
 }
 
@@ -220,26 +203,9 @@ nav ul a {
     bottom: 0;
 }
 
-/*plan 3 */ 
-
-/*.plan-3 {
-    padding: 77px 10px;
-    border: 1px solid black;
-    margin-left: 150px;
-    margin-right: 870px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative; left: 496px; top: -975px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2); 
-    margin-bottom: 0;
-    cursor: pointer;
-    overflow: hidden;
-}*/
-
 .plan-3 {
-    padding: 77px 10px;
-    border: 1px solid black;
+    padding: 77px 10px;         /* padding: 77px top and bottom + 10px right and left */ 
+    border: 1px solid black;        /* adding a solid border with a black color to the plan 3 */
     margin-left: 150px;
     margin-right: 870px;
     margin-top: -462px;
@@ -285,24 +251,8 @@ nav ul a {
     bottom: 0;
 }
 
-/*plan 4 */
-/*.plan-4 {
-    padding: 116px 10px;
-    border: 1px solid black;
-    margin-left: 150px;
-    margin-right: 870px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    position: relative; left: 760px; top: -1462px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2); 
-    margin-bottom: 0;
-    cursor: pointer;
-    overflow: hidden;
-}*/
-
 .plan-4 {
-    padding: 116px 10px;
+    padding: 116px 10px;        
     border: 1px solid black;
     margin-left: 150px;
     margin-right: 870px;
@@ -324,95 +274,108 @@ nav ul a {
 }
 
 .plan-4 img {
-    position: relative; top: -85px; left: 85px;
+    position: relative; top: -85px; left: 85px;     /* adjusting the image of the plan 4 in the page by adding top and left with position: relative */
 }
 
 .plan-4-line {
-    height: 0.90px;
-    background: rgb(0, 0, 0);
-    position: relative; top: 17px;
+    height: 0.90px;         /* addig a line for identifying it as the main section */ 
+    background: rgb(0, 0, 0);       /* color of the line */
+    position: relative; top: 17px;  /* adjusting where the line wants to be in the page */
     margin: 0px 10px;
     bottom: 0;
 }
 
 
 .card-box-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: hsl(0, 0%, 0%);
-    font-size: 16px;
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;         /* adding a font family to the card box body */
+    background-color: hsl(0, 0%, 0%);       /* background color of the card box is black */
+    font-size: 16px;        /* adjusting the font size */
+    margin-top: 20px;       /* giving space from the top by adding margin top: 20px */
     overflow: hidden;
 }
 .container{
-    max-width: 1170px;
-    padding: 0 15px;
+    max-width: 1170px;          /* adding a max width 1170 to the conatiner */
+    padding: 0 15px;        /* padding with 0 top and bottom + 15px right and left */
     margin: auto;
 }
+
+/* Section styles */
 .section{
-    padding: 80px 0;
-    min-height: 100vh;
-    display: flex;
+    padding: 80px 0;        /* Padding around the section */
+    min-height: 100vh;      /* Minimum height to cover full viewport height */
+    display: flex;      /* Flexbox layout for the section */
 }
+
+/* Grid layout for cards within the section */
 .section-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display: grid;      /* Grid layout */
+    grid-template-columns: repeat(3, 1fr);      /* Three equal columns */
+    gap: 30px;      /* Gap between the grid items */
 }
+
+/* Individual card styles */
 .section-card{
-    background-color: hsl(220, 6%, 10%);
-    padding: 120px 30px 30px;
-    position: relative;
-    z-index: 1;
+    background-color: hsl(220, 6%, 10%);        /* Background color */
+    padding: 120px 30px 30px;       /* Padding inside the card */
+    position: relative;     /* Relative positioning for z-index and pseudo-elements */
+    z-index: 1;     /* Stack order */
 }
 
+/* Specific styles for the first card */
 .section-card:nth-child(1){
-    --color: #AA96DA;
+    --color: #AA96DA;       /* Custom property for color */
 }
 
+/* Specific styles for the second card */
 .section-card:nth-child(2){
-    --color: #C5FAD5;
+    --color: #C5FAD5;       /* Custom property for color */
 }
 
+/* Specific styles for the third card */
 .section-card:nth-child(3){
-    --color: #FFBF69;
+    --color: #FFBF69;       /* Custom property for color */
 }
 
+/* Styles for the pseudo-element before each card */
 .section-card::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color);
-    z-index: -1;
-    clip-path: circle(40px at 70px 70px);
-    transition: clip-path 1s ease;
+    content: '';        /* Empty content */
+    position: absolute;      /* Absolute positioning */
+    left: 0;        /* Align to the left */
+    top: 0;     /* Align to the top */
+    height: 100%;       /* Full height */
+    width: 100%;        /* Full width */
+    background-color: var(--color);      /* Background color from custom property */
+    z-index: -1;        /* Stack order behind the card */
+    clip-path: circle(40px at 70px 70px);       /* Initial clipping shape */
+    transition: clip-path 1s ease;      /* Smooth transition for clipping */
 }
 
+/* Hover effect for the card's pseudo-element */
 .section-card:hover::before{
-    clip-path: circle(100%);
+    clip-path: circle(100%);    /* Change clipping shape on hover */
 }
 
+/* Styles for the span inside each card */
 .section-card span{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 80px;
-    width: 80px;
-    font-size: 50px;
-    font-weight: bold;
-    transform: translate(30px, 30px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: hsl(0, 0%, 0%);
-    transition: transform 1s ease;
-    overflow: hidden;
+    position: absolute;     /* Absolute positioning */
+    left: 0;        /* Align to the left */
+    top: 0;     /* Align to the top */
+    height: 80px;       /* Fixed height */
+    width: 80px;        /* Fixed width */
+    font-size: 50px;        /* Font size */
+    font-weight: bold;      /* Font weight */
+    transform: translate(30px, 30px);       /* Initial transform position */
+    display: flex;      /* Flexbox layout for centering */
+    align-items: center;        /* Center align items vertically */
+    justify-content: center;        /* Center align items horizontally */
+    color: hsl(0, 0%, 0%);       /* Text color */
+    transition: transform 1s ease;      /* Smooth transition for transform */
+    overflow: hidden;       /* Hide overflow */
 }
 
+/* Hover effect for the span inside the card */
 .section-card:hover span{
-    transform: translate(0, 30px);
+    transform: translate(0, 30px);      /* Change transform position on hover */
 }
  
 .section-card h2{
