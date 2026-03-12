@@ -1,0 +1,155 @@
+/* =========================================
+   SKIN QUIZ PAGE STYLES (CORRECTED)
+   ========================================= */
+
+.quiz-hero {
+    padding: 60px 5% 100px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: row; /* FORCE: Side-by-Side layout always */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 80px;
+}
+
+/* --- Left Side: Image --- */
+.quiz-image-side {
+    flex: 1; /* Takes up equal 50% space */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Image aligns to the right edge of its box, near the center line */
+    position: relative;
+    max-width: 550px;
+}
+
+/* Premium touch: An elegant offset background square */
+.quiz-image-side::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-beige);
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
+
+.quiz-image-side:hover::before {
+    transform: translate(-10px, 10px);
+}
+
+.quiz-image-side img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Right Side: Text (Alinged Left) --- */
+.quiz-text-side {
+    flex: 1; /* Takes up equal 50% space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* FORCE: Text alinged to the left edge of its box */
+    align-items: flex-start; /* FORCE: Child elements (like button) aling left */
+    max-width: 500px;
+}
+
+.quiz-text-side h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--black);
+}
+
+.quiz-text-side p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Specific padding adjustment for the quiz button (combined with shared class) */
+.quiz-btn {
+    padding: 16px 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+
+/* --- THEME STYLING: YOUR GOLD SHINE ANIMATED BUTTON --- 
+   (Copy-pasted from your requested style) 
+----------------------------------------------------------- */
+.animated-gold-btn {
+    position: relative;
+    border: 1.5px solid rgb(194, 166, 8);
+    background: transparent;
+    color: #000000;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.animated-gold-btn:hover {
+    background: rgb(194, 166, 8);
+    box-shadow: 0 0 30px 5px rgb(194, 166, 8);
+    transition: all 0.2s ease-out;
+    color: white;
+}
+
+/* The Shine Effect Inside */
+.animated-gold-btn::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
+}
+
+.animated-gold-btn:hover::before {
+    animation: sh02 0.5s 0s linear;
+}
+
+.animated-gold-btn:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* The Shine Animation Keyframes */
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}

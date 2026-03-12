@@ -1,549 +1,281 @@
-/* Reset box-sizing and remove default margin and padding for all elements and pseudo-elements */
-*, 
-*::before, 
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* =========================================
+   YOUR CUSTOM BEST SELLERS / REWARDS STYLES
+   ========================================= */
 
-/* Global styles for the body */
-body {
-    margin-bottom: 0;           /* Remove bottom margin */
-    overflow-x: hidden;         /* Hide horizontal overflow */
-    overflow-y: scroll;         /* Always show vertical scrollbar */
-    letter-spacing: 0.06rem;    /* Set letter spacing */
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    padding-bottom: 0;          /* Remove bottom padding */
-    width: 100%;                /* Set body width to 100% */
-}
-
-/* Styles for the padding class */
-.padding {
-    justify-content: center;    /* Center content horizontally */
-    display: flex;              /* Use flexbox for layout */
-    align-items: center;        /* Center content vertically */
-    box-sizing: border-box;     /* Include padding and border in element's total width and height */
-    padding: 12px;              /* Set padding */
-    background-color: black;    /* Set background color */
-    color: white;               /* Set text color */
-    font-size: 14px;            /* Set font size */
-    letter-spacing: 0.06em;     /* Set letter spacing */
-    font-weight: 400;           /* Set font weight */
-    margin-top: 0px;            /* Remove top margin */
-    cursor: pointer;            /* Change cursor to pointer on hover */
-}
-
-/* Add underline text decoration on hover for elements with the padding class */
-.padding:hover {
-    text-decoration: underline;
-}
-
-/* Styles for the logo class */
-.logo {
-    line-height: 70px;          /* Set line height */
-    position: relative;         /* Position relative to its normal position */
-    top: 3px;                   /* Move 3px down */
-    left: -140px;               /* Move 140px left */
-}
-
-/* Styles for navigation unordered list */
-nav ul {
-    display: flex;              /* Use flexbox for layout */
-    align-items: center;        /* Center items vertically */
-    font-size: 14px;            /* Set font size */
-    font-weight: 500;           /* Set font weight */
-    line-height: 140%;          /* Set line height */
-    margin-top: 18px;           /* Set top margin */
-    list-style: none;           /* Remove list bullets */
-    gap: 30px;                  /* Set gap between items */
-}
-
-/* Styles for navigation links */
-nav ul a {
-    text-decoration: none;      /* Remove underline from links */
-    letter-spacing: 1.8px;      /* Set letter spacing */
-}
-
-/* Styles for the link class */
-.link {
-    position: relative;         /* Position relative to its normal position */
-    top: -5px;                  /* Move 5px up */
-    left: -50px;                /* Move 50px left */
-    font-stretch: ultra-expanded; /* Stretch font */
-    padding: 0.5rem 0.75rem;    /* Set padding */
-    color: black;               /* Set text color */
-    transition: color 0.25s;    /* Smooth transition for text color */
-}
-
-/* Change text color on hover for elements with the link class */
-.link:hover {
-    color: white;
-}
-
-/* Styles for the after pseudo-element of the link class */
-.link::after {
-    position: absolute;         /* Position absolute to the nearest positioned ancestor */
-    content: "";                /* No content, used for visual effect */
-    inset: 0;                   /* Stretch to cover the parent element */
-    background-color: black;    /* Set background color */
-    scale: 1 0;                 /* Initially scale height to 0 */
-    z-index: -1;                /* Place behind the text */
-    transition: 0.45s;          /* Smooth transition for scaling */
-}
-
-/* Scale the after pseudo-element on hover for elements with the link class */
-.link:hover::after {
-    scale: 1 1;                 /* Scale to full height */
-}
-
-
-.wrapper{
-    padding: 5px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-    height:auto;
-    display: flex;
-}
-
-.Search {
-    position: relative;  top: -45px; left: 88%;
-    cursor: pointer;
-}
-
-.Person {
-    position: relative; top: -45px; left: 90%;
-    cursor: pointer;
-}
-
-.shopping-bag {
-    position: relative; top: -45px; left: 92%;
-    cursor: pointer;
-}
-
+/* --- 1. Custom Hero Section (With your image) --- */
 .first-section {
     background: grey url(../images/seller-image.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size:cover;
-    object-fit:fill;
-    background-position-x: -60px;
-    width: 1350px;
+    background-size: cover;
+    background-position: center; /* Better than background-position-x: -60px for responsiveness */
+    width: 100%; /* Changed from 1350px so it fits all screens */
     height: 500px;
-    margin-top: -25px;
-    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
 }
 
-/* Styles for the first section header (h1) */
 .first-section h1 {
-    font-size: 42px;                         /* Set font size */
-    color: white;                            /* Set text color */
-    margin-left: 95px;                       /* Set left margin */
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    letter-spacing: 0.01em;                  /* Set letter spacing */
-    font-weight: 300;                        /* Set font weight */
-    position: relative; top: 165px;          /* Position relative to normal position and move down by 165px */
+    font-size: 42px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+    margin-bottom: 30px;
 }
 
-/* Styles for the join-now button */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
 .join-now {
-    margin-left: 90px;                       /* Set left margin */
-    padding: 14px 55px;                      /* Set padding */
-    background-color: white;                 /* Set background color */
-    color: black;                            /* Set text color */
-    text-decoration: none;                   /* Remove underline from text */
-    letter-spacing: 0.10em;                  /* Set letter spacing */
-    justify-content: center;                 /* Center content horizontally */
-    position: relative; top: 155px;          /* Position relative to normal position and move down by 155px */
-    font-size: 15px;                         /* Set font size */
-    border: 1px solid rgb(255, 255, 255);    /* Set border */
-    cursor: pointer;                         /* Change cursor to pointer on hover */
+    padding: 14px 55px;
+    background-color: white;
+    color: black;
+    letter-spacing: 0.10em;
+    font-size: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-/* Styles for the login button */
 .login {
-    margin-left: 10px;                       /* Set left margin */
-    padding: 14px 65px;                      /* Set padding */
-    background-color: transparent;           /* Set background color to transparent */
-    color: white;                            /* Set text color */
-    text-decoration: none;                   /* Remove underline from text */
-    letter-spacing: 0.10em;                  /* Set letter spacing */
-    position: relative; top: 155px;          /* Position relative to normal position and move down by 155px */
-    font-size: 15px;                         /* Set font size */
-    border: 1px solid white;                 /* Set border */
-    cursor: pointer;                         /* Change cursor to pointer on hover */
+    padding: 14px 65px;
+    background-color: transparent;
+    color: white;
+    letter-spacing: 0.10em;
+    font-size: 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-/* Additional position adjustment for join-now button */
-.join-now {
-    position: relative; left: 10px;          /* Position relative to normal position and move left by 10px */
+.join-now:hover { background-color: #e0e0e0; }
+.login:hover { background-color: white; color: black; }
+
+/* --- 2. Typography Utilities --- */
+.section-title {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 545;
+    font-size: 28px;
+    text-transform: uppercase;
 }
 
-/* Additional position adjustment for login button */
-.login {
-    position: relative; left: 10px;          /* Position relative to normal position and move left by 10px */
+/* --- 3. How It Works Section --- */
+.works-section {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Styles for the png container */
-.png {
-    text-align: center;                      /* Center align text */
-    position: relative; top: 80px;           /* Position relative to normal position and move down by 80px */
-    display: flex;                           /* Use flexbox for layout */
-    justify-content: center;                 /* Center content horizontally */
-    gap: 190px;                              /* Set gap between items */
-}
-
-/* Styles for the png-text header (h1) */
-.png-text h1 {
-    position: relative; top: 120px;          /* Position relative to normal position and move down by 120px */
-    display: flex;                           /* Use flexbox for layout */
-    justify-content: center;                 /* Center content horizontally */
-    gap: 190px;                              /* Set gap between items */
-    flex-direction: column;                  /* Arrange items in a column */
-    letter-spacing: -0.0rem;                 /* Set letter spacing */
-}
-
-/* Styles for the png-text paragraph (p) */
-.png-text p {
-    position: relative; top: 130px;          /* Position relative to normal position and move down by 130px */
-    display: flex;                           /* Use flexbox for layout */
-    justify-content: center;                 /* Center content horizontally */
-    gap: 190px;                              /* Set gap between items */
-    flex-direction: column;                  /* Arrange items in a column */
-    text-align: center;                      /* Center align text */
-}
-
-/* Styles for the first horizontal line (line-1) */
-.line-1 {
-    height: 2px;                             /* Set height */
-    margin: 0px 490px;                       /* Set horizontal margins */
-    background-color: rgb(0, 0, 0);          /* Set background color */
-    position: relative; top: 20px;           /* Position relative to normal position and move down by 20px */
-    border-radius: 100px;                    /* Round the corners */
-    bottom: 0;                               /* Position at the bottom */
-}
-
-/* Styles for the second horizontal line (line-2) */
-.line-2 {
-    height: 2px;                             /* Set height */
-    margin: 0px 490px;                       /* Set horizontal margins */
-    background-color: rgb(0, 0, 0);          /* Set background color */
-    position: relative; top: 20px;           /* Position relative to normal position and move down by 20px */
-    border-radius: 100px;                    /* Round the corners */
-    bottom: 0;                               /* Position at the bottom */
-}
-
-/* Styles for the amount header (h1) */
-.amount-h1 {
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    color: black;                            /* Set text color */
-    font-size: 30px;                         /* Set font size */
-    display: flex;                           /* Use flexbox for layout */
-    gap: 150px;                              /* Set gap between items */
-    margin-top: 90px;                        /* Set top margin */
-    justify-content: center;                 /* Center content horizontally */
-    list-style: none;                        /* Remove list bullets */
-}
-
-/* Styles for the amount paragraph (p) */
-.amount-p {
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    color: #5b5a5a;                         /* Set text color */
-    font-weight: 400;                        /* Set font weight */
-    font-size: 18px;                         /* Set font size */
-    display: flex;                           /* Use flexbox for layout */
-    gap: 110px;                              /* Set gap between items */
-    margin-top: 10px;                        /* Set top margin */
-    justify-content: center;                 /* Center content horizontally */
-    list-style: none;                        /* Remove list bullets */
-}
-
-
-.images-redeem {
+.works-grid {
     display: flex;
     justify-content: center;
-    list-style: none;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    text-align: center;
+}
+
+/* FIXED: Changed from .step-card to .work-step to match the HTML */
+.work-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This perfectly centers the image and text */
     gap: 15px;
+    width: 280px;
+}
+
+.work-step img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 10px auto; /* Forces the image dead-center */
+    transition: transform 0.3s ease;
+}
+
+.work-step:hover img {
+    transform: translateY(-10px); /* Fun little bounce effect */
+}
+
+.work-step h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.work-step p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b5a5a;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* --- 4. Points & Values Section --- */
+.points-section {
+    text-align: center;
+    padding: 0 5%;
+}
+
+.subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b5a5a;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.line-1, .line-2 {
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    max-width: 400px;
+    margin: 20px auto; /* Centers the line beautifully */
+    border-radius: 100px;
+}
+
+.gold-text {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(194, 166, 8);
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.amount-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.amount-box h4 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.amount-box p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b5a5a;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* --- 5. Redeem Products Section --- */
+.redeem-section {
+    padding: 0 5% 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.redeem-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.redeem-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redeem-item img {
+    margin-bottom: 20px;
+}
+
+.redeem-item h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.points-val {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+/* --- 6. Your Custom Animated Golden Button --- */
+.button-container {
+    display: flex;
+    justify-content: center;
     margin-top: 60px;
 }
 
-.redeem-h1 {
-    font-family: 'Times New Roman', Times, serif; 
-    color: #000000; 
-    font-weight: 400; 
-    font-size: 18px;
-    display: flex;
-    gap: 115px;
-    margin-top: 20px;
-    justify-content: center;
-    list-style: none;
+.animated-gold-btn {
+    position: relative;
+    padding: 11px 45px;
+    border: 1.5px solid rgb(194, 166, 8);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #000000;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 
-.redeem-p {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: black; 
-    font-size: 22px;
-    display: flex;
-    gap: 150px;
-    margin-top: 5px;
-    justify-content: center;
-    list-style: none;
-    font-weight:lighter;
+.animated-gold-btn:hover {
+    background: rgb(194, 166, 8);
+    box-shadow: 0 0 30px 5px rgb(194, 166, 8);
+    transition: all 0.2s ease-out;
+    color: white;
 }
 
-/* Styles for the button element */
-button {
-    position: relative; left: 530px;         /* Position relative to normal position and move left by 530px */
-    padding: 11px 45px;                      /* Set padding */
-    border: 1.5px solid rgb(194, 166, 8);    /* Set border */
-    font-size: 16px;                         /* Set font size */
-    text-transform: uppercase;               /* Transform text to uppercase */
-    letter-spacing: 2px;                     /* Set letter spacing */
-    background: transparent;                 /* Set background to transparent */
-    color: #000000;                          /* Set text color */
-    overflow: hidden;                        /* Hide overflow */
-    box-shadow: 0 0 0 0 transparent;         /* Set box shadow */
-    -webkit-transition: all 0.2s ease-in;    /* Set transition for WebKit browsers */
-    -moz-transition: all 0.2s ease-in;       /* Set transition for Mozilla browsers */
-    transition: all 0.2s ease-in;            /* Set transition */
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    margin: 50px 0px 0px 0px;                /* Set margin */
-    cursor: pointer;                         /* Change cursor to pointer on hover */
+.animated-gold-btn::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    transform: skewX(-20deg);
 }
 
-/* Styles for the button element on hover */
-button:hover {
-    background: rgb(194, 166, 8);            /* Change background color */
-    box-shadow: 0 0 30px 5px rgb(194, 166, 8); /* Set box shadow */
-    -webkit-transition: all 0.2s ease-out;   /* Set transition for WebKit browsers */
-    -moz-transition: all 0.2s ease-out;      /* Set transition for Mozilla browsers */
-    transition: all 0.2s ease-out;           /* Set transition */
-    color: white;                            /* Change text color */
+.animated-gold-btn:hover::before {
+    animation: sh02 0.5s 0s linear;
 }
 
-/* Styles for the button element before pseudo-element on hover */
-button:hover::before {
-    -webkit-animation: sh02 0.5s 0s linear;  /* Set animation for WebKit browsers */
-    -moz-animation: sh02 0.5s 0s linear;     /* Set animation for Mozilla browsers */
-    animation: sh02 0.5s 0s linear;          /* Set animation */
+.animated-gold-btn:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
 }
 
-/* Styles for the button element before pseudo-element */
-button::before {
-    content: '';                             /* Set content */
-    display: block;                          /* Display as block */
-    width: 0px;                              /* Set width */
-    height: 86%;                             /* Set height */
-    position: absolute;                      /* Position absolute */
-    top: 7%;                                 /* Position 7% from top */
-    left: 0%;                                /* Position 0% from left */
-    opacity: 0;                              /* Set opacity */
-    background: #fff;                        /* Set background color */
-    box-shadow: 0 0 50px 30px #fff;          /* Set box shadow */
-    -webkit-transform: skewX(-20deg);        /* Skew for WebKit browsers */
-    -moz-transform: skewX(-20deg);           /* Skew for Mozilla browsers */
-    -ms-transform: skewX(-20deg);            /* Skew for MS browsers */
-    -o-transform: skewX(-20deg);             /* Skew for Opera browsers */
-    transform: skewX(-20deg);                /* Skew */
-}
-
-/* Keyframes for the sh02 animation */
+/* Your Custom Keyframes */
 @keyframes sh02 {
     from {
-        opacity: 0;                          /* Set initial opacity */
-        left: 0%;                            /* Set initial left position */
+        opacity: 0;
+        left: 0%;
     }
     50% {
-        opacity: 1;                          /* Set middle opacity */
+        opacity: 1;
     }
     to {
-        opacity: 0;                          /* Set final opacity */
-        left: 100%;                          /* Set final left position */
-    }
-}
-
-/* Styles for the button element on active state */
-button:active {
-    box-shadow: 0 0 0 0 transparent;         /* Set box shadow */
-    -webkit-transition: box-shadow 0.2s ease-in; /* Set transition for WebKit browsers */
-    -moz-transition: box-shadow 0.2s ease-in; /* Set transition for Mozilla browsers */
-    transition: box-shadow 0.2s ease-in;     /* Set transition */
-}
-
-
-/* FOOTER SECTION */
-
-footer {
-    font-family: 'Times New Roman', Times, serif; /* Set font family */
-    background-color: hsl(262, 30%, 8%);          /* Set background color */
-    color: #fbfcfd;                              /* Set text color */
-}
-
-/* EMail user input bar */
-
-input {
-    all: unset;                                  /* Unset all inherited properties */
-}
-  
-.input-wrapper {
-    width: 100%;                                 /* Set width to 100% */
-    max-width: 400px;                            /* Set maximum width */
-    display: flex;                               /* Use flexbox for layout */
-    align-items: center;                         /* Center align items vertically */
-    background: hsl(231, 14%, 10%);              /* Set background color */
-    border: 2px solid #2b2c37;                   /* Set border */
-    border-radius: 10px;                         /* Set border radius */
-    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px, /* Set box shadow */
-                #0000000a 0px 10px 10px -5px;
-    transition: all 0.35s ease-out;              /* Set transition */
-    position: relative; top: -25px; left: 68px;  /* Position relative and adjust position */
-    cursor: text;                                /* Set cursor to text */
-}
-  
-.input {
-    width: calc(100% - 70px);                    /* Set width */
-    font: inherit;                               /* Inherit font properties */
-    font-size: 18px;                             /* Set font size */
-    padding: 1rem;                               /* Set padding */
-}
-
-.input::placeholder {
-    color: #727884;                              /* Set placeholder text color */
-}
-  
-.input-wrapper:has(input:focus) {
-    border: 2px solid #de55de;                   /* Change border color when input is focused */
-    box-shadow: 0 0 120px hsl(300 67% 60% / 0.5); /* Change box shadow when input is focused */
-}
-  
-.input-wrapper > svg {
-    position: absolute;                          /* Position absolute */
-    right: 1rem;                                 /* Position 1rem from right */
-    width: 28px;                                 /* Set width */
-    flex-shrink: 0;                              /* Prevent shrinking */
-    transition: 0.25s;                           /* Set transition */
-}
-  
-svg > path {
-    fill: none;                                  /* Set fill to none */
-    stroke: #727884;                             /* Set stroke color */
-}
-  
-.input:focus + svg > path {
-    stroke: none;                                /* Remove stroke when input is focused */
-    fill: hsl(328, 73%, 72%);                    /* Set fill color when input is focused */
-}
-
-.input:focus + svg {
-    scale: 1.2;                                  /* Scale up when input is focused */
-}
-
-footer {
-    width: 1260px;                               /* Set width */
-    height: 500px;                               /* Set height */
-    position: relative; top: 40px;               /* Position relative and adjust position */
-    overflow-x: hidden;                          /* Hide horizontal overflow */
-    overflow-y: hidden;                          /* Hide vertical overflow */
-}
-
-.clock {
-    position: relative; top: 188px; left: 70px;  /* Position relative and adjust position */
-}
-
-.envelope {
-    position: relative; top: 195px; left: 70px;  /* Position relative and adjust position */
-}
-
-.copyright {
-    background-color: white;                     /* Set background color */
-    width: 0px;                                  /* Set width */
-    height: 15px;                                /* Set height */
-    position: relative; top: 120px; left: 60px;  /* Position relative and adjust position */
-}
-
-.shop {
-    position: relative; top: -425px; left: 680px;/* Position relative and adjust position */
-}
-
-.Socials {
-    display: flex;                               /* Use flexbox for layout */
-    list-style: none;                            /* Remove list bullets */
-    gap: 1rem;                                   /* Set gap between items */
-}
-  
-.item a {
-    text-decoration: none;                       /* Remove underline from links */
-    width: 2rem;                                 /* Set width */
-    height: 2rem;                                /* Set height */
-    background-color: #f0f9fe;                   /* Set background color */
-    border-radius: 50%;                          /* Set border radius to make it circular */
-    display: flex;                               /* Use flexbox for layout */
-    justify-content: center;                     /* Center content horizontally */
-    align-items: center;                         /* Center content vertically */
-    position: relative; left: 1000px; top: -410px; /* Position relative and adjust position */
-    z-index: 1;                                  /* Set z-index */
-    border: 3px solid #f0f9fe;                   /* Set border */
-    overflow: hidden;                            /* Hide overflow */
-}
-  
-.item a::before {
-    content: "";                                 /* Set content */
-    position: absolute;                          /* Position absolute */
-    width: 100%;                                 /* Set width to 100% */
-    height: 100%;                                /* Set height to 100% */
-    background: var(--bg-color);                 /* Set background color */
-    z-index: 0;                                  /* Set z-index */
-    scale: 1 0;                                  /* Scale */
-    transform-origin: bottom;                    /* Set transform origin */
-    transition: scale 0.5s ease;                 /* Set transition */
-}
-  
-.item:hover a::before {
-    scale: 1 1;                                  /* Scale on hover */
-}
-  
-.icon {
-    font-size: 1rem;                             /* Set font size */
-    color: hsl(203, 92%, 8%);                    /* Set color */
-    transition: 0.5s ease;                       /* Set transition */
-    z-index: 2;                                  /* Set z-index */
-}
-  
-.item a:hover .icon {
-    color: #fff;                                 /* Change color on hover */
-    transform: rotateY(360deg);                  /* Rotate on hover */
-}
-  
-.item:nth-child(1) {
-    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7); /* Set background gradient for the first child */
-}
-.item:nth-child(2) {
-    --bg-color: #0077b5;                         /* Set background color for the second child */
-}
-.item:nth-child(3) {
-    --bg-color: #ff0000;                         /* Set background color for the third child */
-}
-.item:nth-child(4) {
-    --bg-color: #000;                            /* Set background color for the fourth child */
-}
-
-/* End of footer Section */
-
-/* Animation for elements with the transitionIn class */
-.animation {
-    animation: transitionIn 0.75s;               /* Set animation */
-}
-
-/* Keyframes for the transitionIn animation */
-@keyframes transitionIn {
-    from {
-        opacity: 0;                             /* Set initial opacity */
-        transform: translateX(-10px);           /* Set initial transform */
-    }
-    to {
-        opacity: 1;                             /* Set final opacity */
-        transform: translateX(0);               /* Set final transform */
+        opacity: 0;
+        left: 100%;
     }
 }
