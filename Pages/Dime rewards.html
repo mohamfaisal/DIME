@@ -222,6 +222,110 @@
         </div>
     </footer>
 
+        <div class="auth-overlay" id="authOverlay"></div>
+    <aside class="auth-sidebar" id="authSidebar">
+        
+        <div class="auth-header">
+            <h2>Sign In</h2>
+            <button class="close-auth" id="closeAuth" aria-label="Close Menu">&times;</button>
+        </div>
+        
+        <div class="auth-body">
+            <p class="auth-welcome">Welcome back! Please enter your details.</p>
+            
+            <form class="auth-form">
+                <div class="floating-input-group">
+                    <input type="email" id="emailInput" class="float-input" required>
+                    <label for="emailInput" class="float-label">Email Address</label>
+                </div>
+                
+                <div class="floating-input-group">
+                    <input type="password" id="passwordInput" class="float-input" required>
+                    <label for="passwordInput" class="float-label">Password</label>
+                </div>
+                
+                <a href="#" class="forgot-password">Forgot your password?</a>
+                
+                <button type="submit" class="auth-submit-btn">SIGN IN</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>New to DIME?</p>
+                <button class="create-account-btn">CREATE AN ACCOUNT</button>
+            </div>
+        </div>
+    </aside>
+
+            <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="close-search" id="closeSearch" aria-label="Close Search">&times;</button>
+            
+            <form class="search-form">
+                <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                <input type="text" id="searchInput" placeholder="What are you looking for?" autocomplete="off">
+            </form>
+            
+            <div class="popular-searches">
+                <p>POPULAR SEARCHES</p>
+                <ul>
+                    <li><a href="#">Wonderscreen</a></li>
+                    <li><a href="#">Super Firm Serum</a></li>
+                    <li><a href="#">TBT Cream</a></li>
+                    <li><a href="#">Perfume Rollers</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        
+        <div class="cart-header">
+            <h2>Your Cart (1)</h2>
+            <button class="close-cart" id="closeCart" aria-label="Close Cart">&times;</button>
+        </div>
+        
+        <div class="shipping-motivator">
+            <p>You are <strong>$25.00</strong> away from free shipping!</p>
+            <div class="shipping-bar">
+                <div class="shipping-progress" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <div class="cart-body">
+            <div class="cart-item">
+                <div class="cart-item-img">
+                    <img src="../images/img-11.webp" alt="Super Firm Serum">
+                </div>
+                <div class="cart-item-details">
+                    <div class="item-title-price">
+                        <h3>Super Firm Serum</h3>
+                        <button class="remove-item"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                    <p class="item-desc">1 oz / 30 ml</p>
+                    <div class="item-controls">
+                        <div class="quantity-selector">
+                            <button class="qty-btn">-</button>
+                            <span class="qty-num">1</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <p class="item-price">Dhs. 75</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <p>Subtotal</p>
+                <p>Dhs. 75</p>
+            </div>
+            <p class="cart-taxes">Shipping & taxes calculated at checkout</p>
+            <button class="btn solid-btn checkout-btn">CHECKOUT</button>
+            <a href="#" class="continue-shopping" id="continueShopping">Continue Shopping</a>
+        </div>
+    </aside>
+
     <script src="../JavaScript/main.js"></script>
 </body>
 </html>

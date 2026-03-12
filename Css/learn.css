@@ -1,378 +1,253 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* =========================================
+   LEARN PAGE SPECIFIC STYLES
+   ========================================= */
+
+/* --- 1. Full Width Video Hero --- */
+.video-hero {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    background-color: var(--black);
 }
 
-html {
-    height: 100%;
-}
-
-body{
-    margin-bottom: 0;
-    overflow-x: hidden;
-    overflow-y:auto;
-    letter-spacing: 0.06rem;
-    font-family:'Times New Roman', Times, serif;
-    padding-bottom: 0;
+.video-hero video {
     width: 100%;
     height: 100%;
-    border-bottom: 0;
-}
-.padding {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 12px;
-    background-color: black;
-    color: white;
-    font-size: 14px;
-    letter-spacing: 0.06em;
-    font-weight: 400;
-    margin-top: 0px;
-    cursor: pointer;
+    object-fit: cover;
+    display: block;
 }
 
-.padding:hover {
-    text-decoration: underline;
-}
-
-.logo{
-    line-height:70px;
-    position: relative; top: 3px; left: -140px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 140%;
-    margin-top: 18px;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul a {
-    text-decoration: none;
-    letter-spacing: 1.8px;
-}
-
-.link{
-    position: relative; top: -5px; left: -50px;
-    font-stretch:ultra-expanded;
-    padding: 0.5rem 0.75rem;
+/* --- Typography Defaults --- */
+main h1 {
+    font-family: 'Times New Roman', Times, serif;
     color: black;
-    transition: color 0.25s;
+    font-weight: 500;
+    font-size: 42px;
 }
 
-.link:hover {
-    color: white;
+main p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #5b5a5a;
+    font-weight: 400;
+    font-size: 22px;
 }
 
-.link::after {
-    position: absolute;
-    content: "";
-    inset: 0;
-    background-color: black;
-    scale: 1 0;
-    z-index: -1;
-    transition: 0.45s;
+.line-1, .line-4 {
+    height: 1px;
+    background: rgb(0, 0, 0);
+    max-width: 1100px;
+    margin: 60px auto;
+    opacity: 0.2;
 }
 
-.link:hover::after {
-    scale: 1 1;
+/* --- 2. Mission Section --- */
+.mission-section, .vegan-section, .about-text {
+    text-align: center;
+    padding: 80px 5% 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.wrapper{
-    padding: 5px;
-    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
-    justify-content: center;
-    align-items: center;
-    height:auto;
+.mission-icons {
+    margin-top: 40px;
     display: flex;
+    justify-content: center;
 }
 
-.Search {
-    position: relative;  top: -45px; left: 88%;
-    cursor: pointer;
+.mission-icons img {
+    max-width: 100%; /* Makes your icon image shrink on small phones */
+    height: auto;
 }
 
-.Person {
-    position: relative; top: -45px; left: 90%;
-    cursor: pointer;
+/* --- 3. Four Steps Grid --- */
+.four-steps-section {
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.shopping-bag{
-    position: relative; top: -45px; left: 92%;
-    cursor: pointer;
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-.first-point {
-    text-align: left;
-    margin-left: 100px;
-    margin-top: 100px;
+.step-col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.step-item .roman-numeral {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
 }
 
-.line-1 {
-    height: 1px;
-    background: rgb(0, 0, 0);
-    margin: 0px 60px;
-    margin-top: 60px;
+.step-item h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
-.right-img {
-    margin-left: 900px;
-    margin-top: -450px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: left;
+.step-item p {
+    font-size: 17px;
+    line-height: 1.4;
 }
 
-.third-point {
-    margin-top: 115px;
+/* Desktop Grid layout */
+@media (min-width: 900px) {
+    .steps-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .text-left { text-align: left; }
+    .text-right { text-align: left; }
 }
 
-.line-4 {
-    height: 1px;
-    background: rgb(0, 0, 0);
-    margin: 0px 60px;
-    margin-top: 30px;
-}
-/* Styles for the learn button */
-.learn-btn {
-    margin-left: 820px; /* Left margin of 820px */
-    margin-top: 40px; /* Top margin of 40px */
-    padding: 16px 60px; /* Padding: 16px top and bottom, 60px left and right */
-    font-size: 16px; /* Font size of the button text */
-    background-color: black; /* Background color of the button */
-    color: white; /* Text color of the button */
-    border-width: 0.1px; /* Border width */
-    width: 300px; /* Fixed width of 300px */
+/* --- 4. DIME Promise Split Section --- */
+.promise-section {
+    padding: 80px 5%;
 }
 
-/* Styles for the learn button on hover */
-.learn-btn:hover {
-    box-shadow: inset -10.5em 0 0 0 white, inset 10.5em 0 0 0 white; /* Inset box shadows for hover effect */
-    background-color: white; /* Background color changes to white on hover */
-    color: black; /* Text color changes to black on hover */
-    transition: 0.85s; /* Transition duration for hover effect */
-    border-width: 1px; /* Border width changes to 1px on hover */
+.promise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
 }
 
-/* Styles for the black learn section */
-.black-learn {
-    background-color: #1e1e1e; /* Dark background color */
-    padding: 10px 10px 0px 10px; /* Padding: 10px top, left, and right, 0px bottom */
-    margin-top: 70px; /* Top margin of 70px */
-}
-
-/* Styles for the carousel container */
-.carousel {
-    overflow: hidden; /* Hide overflow content */
-    width: 1300px; /* Fixed width of 1300px */
-    margin-top: 60px; /* Top margin of 60px */
-}
-
-/* Styles for the wrap container inside the carousel */
-.wrap {
-    display: grid; /* Grid display */
-    grid-auto-flow: column; /* Automatic flow in the column direction */
-    grid-auto-columns: 250px; /* Automatic column width of 250px */
-    justify-content: stretch; /* Stretch items to fill the container */
-    animation: slide 15s linear infinite; /* Slide animation for 15 seconds, linear and infinite */
-}
-
-/* Styles for images inside the wrap container */
-.wrap img {
-    width: 250px; /* Fixed width of 250px */
-    height: 250px; /* Fixed height of 250px */
-    border-radius: 15px; /* Rounded corners with radius 15px */
-    object-fit: cover; /* Cover the image within the given dimensions */
-}
-
-
-@keyframes slide {
-    to {
-        translate: calc(-4 * 250px);
+@media (min-width: 900px) {
+    .promise-container {
+        flex-direction: row;
+        text-align: left;
     }
 }
 
-
-/*FOOTER SECTION */
-
-footer {
-    font-family:'Times New Roman', Times, serif;
-    background-color: hsl(262, 30%, 8%);
-    color: #fbfcfd;
+.promise-img {
+    flex: 1;
 }
 
-/*EMail user input bar*/
-
-input {
-    all: unset;
-}
-  
-.input-wrapper {
+.promise-img img {
     width: 100%;
-    max-width: 400px;
+    max-width: 570px;
+    height: auto;
+    object-fit: cover;
+}
+
+.promise-text {
+    flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers button and text on mobile */
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    .promise-text {
+        align-items: flex-start; /* Aligns left on desktop */
+        text-align: left;
+    }
+}
+
+.promise-text h1 {
+    margin-bottom: 30px;
+    letter-spacing: -0.05em;
+}
+
+.promise-text p {
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* YOUR CUSTOM CURTAIN HOVER BUTTON */
+.learn-btn {
+    margin-top: 20px;
+    padding: 16px 60px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.45s ease;
+}
+
+.learn-btn:hover {
+    box-shadow: inset -10.5em 0 0 0 white, inset 10.5em 0 0 0 white;
+    color: black;
+}
+
+/* --- 5. About Founders --- */
+.founders-img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+/* --- 6. The Black Quote Section --- */
+.black-learn {
+    background-color: #1e1e1e;
+    padding: 80px 5% 40px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background: hsl(231, 14%, 10%);
-    border: 2px solid #2b2c37;
-    border-radius: 10px;
-    box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px,
-      #0000000a 0px 10px 10px -5px;
-    transition: all 0.35s ease-out;
-    position: relative; top: -25px; left: 68px;
-    cursor: text;
-}
-  
-.input {
-    width: calc(100% - 70px);
-    font: inherit;
-    font-size: 18px;
-    padding: 1rem;
-}
-.input::placeholder {
-    color: #727884;
-}
-  
-.input-wrapper:has(input:focus) {
-    border: 2px solid #de55de;
-    box-shadow: 0 0 120px hsl(300 67% 60% / 0.5);
-}
-  
-.input-wrapper > svg {
-    position: absolute;
-    right: 1rem;
-    width: 28px;
-    flex-shrink: 0;
-    transition: 0.25s;
-}
-  
-svg > path {
-    fill: none;
-    stroke: #727884;
-}
-  
-.input:focus + svg > path {
-    stroke: none;
-    fill: hsl(328, 73%, 72%);
+    text-align: center;
 }
 
-.input:focus + svg {
-    scale: 1.2;
+.quote-text {
+    color: white;
+    font-size: clamp(24px, 3vw, 34px);
+    font-style: italic;
+    max-width: 900px;
+    margin-bottom: 20px;
 }
 
-footer {
-    width: 1260px;
-    height: 500px;
-    overflow-x: hidden;
-    margin-top: 40px;
-    overflow-y: hidden;
+.signature-img {
+    max-width: 300px;
 }
 
-.clock {
-    position: relative; top: 188px; left: 70px;
-}
-
-.envelope {
-    position: relative; top: 195px; left: 70px;
-}
-
-.copyright {
+/* --- 7. Your Infinite Carousel --- */
+.carousel-section {
+    padding: 60px 0;
     background-color: white;
-    width: 0px;
-    height: 15px;
-    position: relative; top: 120px; left: 60px;
-
 }
 
-.shop {
-    position: relative; top: -425px; left: 680px;
-}
-
-.Socials {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-}
-  
-.item a {
-    text-decoration: none;
-    width: 2rem;
-    height: 2rem;
-    background-color: #f0f9fe;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; left: 1000px; top: -410px;
-    z-index: 1;
-    border: 3px solid #f0f9fe;
+.carousel {
     overflow: hidden;
-}
-  
-.item a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: 0;
-    scale: 1 0;
-    transform-origin: bottom;
-    transition: scale 0.5s ease;
-}
-  
-.item:hover a::before {
-    scale: 1 1;
-}
-  
-.icon {
-    font-size: 1rem;
-    color: hsl(203, 92%, 8%);
-    transition: 0.5s ease;
-    z-index: 2;
-}
-  
-.item a:hover .icon {
-    color: #fff;
-    transform: rotateY(360deg);
-}
-  
-.item:nth-child(1) {
-    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
-}
-.item:nth-child(2) {
-    --bg-color: #0077b5;
-}
-.item:nth-child(3) {
-    --bg-color: #ff0000;
-}
-.item:nth-child(4) {
-    --bg-color: #000;
+    width: 100%; /* Makes it span the whole screen */
+    margin: 0 auto;
 }
 
-/* End of footer Section */
-
-.animation {
-	animation: transitionIn 0.75s;
+.wrap {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    gap: 20px; /* Added a gap so images don't touch */
+    justify-content: start; /* Keeps them lined up */
+    animation: slide 15s linear infinite;
 }
 
-@keyframes transitionIn {
-	from {
-		opacity: 0;
-		transform: translateX(-10px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
+.wrap img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
+/* Your slide animation */
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes slide {
+        to {
+            transform: translateX(calc(-4 * 270px)); /* Adjusted slightly for the 20px gap */
+        }
+    }
+}
