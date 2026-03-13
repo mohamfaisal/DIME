@@ -221,6 +221,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // You can safely add more JavaScript for the homepage down here later!
+    // --- 4. MOBILE HAMBURGER MENU LOGIC ---
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    const openMobileMenu = () => {
+        if(mainNav && mobileOverlay) {
+            mainNav.classList.add('active');
+            mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    const closeMobileMenuPanel = () => {
+        if(mainNav && mobileOverlay) {
+            mainNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    if(mobileMenuBtn) mobileMenuBtn.addEventListener('click', openMobileMenu);
+    if(closeMobileMenu) closeMobileMenu.addEventListener('click', closeMobileMenuPanel);
+    if(mobileOverlay) mobileOverlay.addEventListener('click', closeMobileMenuPanel);
+    
 });
 

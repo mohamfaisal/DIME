@@ -246,16 +246,3 @@
     text-underline-offset: 4px;
 }
 
-/* --- 8. Mobile Adjustments --- */
-@media (max-width: 768px) {
-    .shop-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    
-    .tall-banner {
-        grid-row: span 1; /* Stops the banner from being too tall on phones */
-        aspect-ratio: 1 / 1;
-    }
-}
