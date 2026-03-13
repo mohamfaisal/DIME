@@ -1495,3 +1495,67 @@ html {
 ::-webkit-scrollbar-thumb:active {
     background-color: #333; /* A slightly lighter black when clicked */
 }
+
+/* =========================================
+   PAGE PRELOADER STYLES
+   ========================================= */
+
+/* The solid white background that covers the screen */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 99999; /* Highest possible layer to hide the site */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+}
+
+/* When JS adds the .fade-out class, it disappears smoothly */
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px); /* Elegant slight slide-up effect as it fades */
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* The DIME text pulsing animation */
+.preloader-logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #000000;
+    letter-spacing: 0.3em;
+    margin-right: -0.3em; /* Centers the text properly with letter-spacing */
+    font-weight: 500;
+    animation: pulseText 1.5s infinite alternate ease-in-out;
+}
+
+/* The elegant expanding line beneath the text */
+.preloader-line {
+    width: 0px;
+    height: 1px;
+    background-color: #000000;
+    animation: drawLine 1.5s infinite alternate cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Keyframe Animations */
+@keyframes pulseText {
+    0% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+@keyframes drawLine {
+    0% { width: 0px; opacity: 0; }
+    50% { opacity: 1; }
+    100% { width: 120px; opacity: 1; }
+}

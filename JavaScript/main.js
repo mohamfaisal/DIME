@@ -249,3 +249,25 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+// --- PAGE PRELOADER LOGIC ---
+// We use window 'load' instead of 'DOMContentLoaded' because it waits 
+// for ALL images, videos, and CSS to finish downloading completely!
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    if (preloader) {
+        // We add a tiny 500ms delay so the user can actually see the 
+        // premium loading screen even if they have super fast internet.
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            
+            // Clean up: removes the preloader from the document flow 
+            // after the 0.8s CSS fade animation finishes.
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800); 
+            
+        }, 500); 
+    }
+});
+
